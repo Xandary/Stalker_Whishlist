@@ -5,39 +5,54 @@
       <script src="https://unpkg.com/papaparse@latest/papaparse.min.js"></script>
       <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
       <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="main.css">
+
       <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+      <script type="text/javascript" src="db.js"></script>
       <script type="text/javascript" src="item.js"></script>
    </head>
    <body>
       <div id='app' >
          <ul class="nav nav-tabs nav-justified">
             <li v-for="element in db" class="nav-item">
-              <a class="nav-link" @click.prevent="setActive(element.raid)" :class="{ active: isActive(element.raid) }" :href="element.raid">{{element.raid}}</a>
+              <a class="nav-link" @click.prevent="setRaidActive(element.raid)" :class="{ active: isRaidActive(element.raid) }" :href="element.raid">{{element.raid}}</a>
             </li>
           </ul>
+
+          <div class="tab-content">
+            <div class="tab-pane fade" :class="{ 'active show': isRaidActive(raid.raid) }" v-for="raid in db">
+              <ul class="nav nav-tabs nav-justified">
+                <li v-for="boss in raid.boss" class="nav-item">
+                  <a class="nav-link" @click.prevent="setBossActive(boss.name)" :class="{ active: isBossActive(boss.name) }" :href="boss.name">{{boss.name}}</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
           <div class="tab-content py-3" >
-            <div v-for="element in db" class="tab-pane fade" :class="{ 'active show': isActive(element.raid) }" :id="element.raid">
-              <table>
-                  <thead>
-                    <tr>
-                      <th>Item</th>
-                      <th>Order</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr v-for="item in element.item">
-                      <td>{{item.name}}</td>
-                      <td>
-                        <div class="card text-white bg-dark" style="width: 9rem; display:inline-block; margin:2px;"  v-for="order in item.order">
-                          <div class="card-body">
-                            <h5 class="card-title">{{order.name}}</h5>
-                            <p class="card-text">{{order.value}}</p>
+            <div v-for="element in db" class="tab-pane fade tab-content py-3" :class="{ 'active show': isRaidActive(element.raid) }" :id="element.raid">
+              <div v-for="boss in element.boss" class="tab-pane fade" :class="{ 'active show': isBossActive(boss.name) }" :id="boss.name">
+                <table>
+                    <thead>
+                      <tr>
+                        <th>Item</th>
+                        <th>Order</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr v-for="item in boss.items">
+                        <td>{{item.name}}</td>
+                        <td>
+                          <div class="card text-white bg-dark" style="width: 12rem; display:inline-block; margin:2px;text-align: center;"  v-for="order in item.order">
+                            <div class="card-body" style="padding: 0.2rem;">
+                              <h5 class="card-title">{{order.name}}: {{order.value}}</h5>
+                            </div>
                           </div>
-                        </div>
-                      </td>
-                    </tr>
-                  </tbody>
-              </table>
+                        </td>
+                      </tr>
+                    </tbody>
+                </table>
+              </div>
             </div>
           </div>
       </div>      

@@ -1,0 +1,109 @@
+body {
+    background-color: #111;
+    font-size: 1em;
+    overflow-x: hidden;
+    cursor: default;
+    color: #eee;
+}
+main {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+    cursor: default;
+}
+
+textarea, input, nav, ul, li, a, button, p, span, h1, h2, h3, h4, label {
+    margin: 0; padding: 0;
+    line-height: 1.5;
+    font-size: 100%;
+}
+
+a.link {
+    cursor: pointer;
+    color: #5daf5d;
+    text-decoration: none;
+    position: relative;
+}
+
+a.link:after, a.link:before, a.link:visited, a.link:visited:after, a.link:visited:before {
+    content: "";
+    height: 1px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #5daf5d;
+    width: 100%;
+}
+
+a.link:before {
+    opacity: .4;
+}
+
+a.link:after {
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transition: -webkit-transform .3s ease;
+    transition: transform .3s ease;
+}
+
+a.link:hover:after {
+    -webkit-transform: scale(1);
+    transform: scaleX(1);
+}
+
+.container_hidden {
+    display: none;
+}
+
+
+hr {
+    border-top: 1px solid #c7e7ff;
+}
+
+img {
+    width: 100%;
+    margin: 0; padding: 0;
+    display: block;
+    background-color: transparent;
+    border-color: #111;
+}
+
+img {
+    display: block;
+    border: 0;
+}
+img.lazy {
+    opacity: 0;
+}
+img:not(.initial) {
+    transition: opacity 300ms;
+}
+
+img.initial,
+img.loaded,
+img.error {
+    opacity: 1;
+}
+
+img:not([src]) {
+    visibility: hidden;
+}
+
+@-moz-document url-prefix() {
+    img:-moz-loading {
+        visibility: hidden;
+    }
+}
+
+div.lazy {
+    transition: 300ms;
+}
+div.loading {
+    opacity: 0;
+}
+div.loaded {
+    opacity: 1;
+}
