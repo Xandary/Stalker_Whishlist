@@ -1,5 +1,5 @@
 const item = {
-    kharazhan: [
+    Karazhan: [
         "Royal Cloak of Arathi Kings",
         "Shadow-Cloak of Dalaran",
         "Shadowvine Cloak of Infusion",
@@ -128,7 +128,7 @@ const item = {
         "Ravager's Bands",
         "Ravager's Bracers"
     ],
-    gruul: [
+    Gruul: [
         "Brute Cloak of the Ogre-Magi",
         "Windshear Boots",
         "Gantlets of Martial Perfection",
@@ -149,7 +149,7 @@ const item = {
         "Belt of Divine Inspiration",
         "Bladespire Warbands"
     ],
-    magtheridon: [
+    Magtheridon: [
         "Cloak of the Pit Stalker",
         "Soul-Eater's Handwraps",
         "Liar's Tongue Gloves",
