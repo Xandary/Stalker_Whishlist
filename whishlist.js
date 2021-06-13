@@ -13,13 +13,10 @@ const app = new Vue({
         activeBoss: 'Karazhan'
     },
     created: function () {
-        if (db !== undefined) {
-            console.log('read from db');
-            this.db = db;
-        } else {
-            this.prepareDb();
-            this.fetchWhishlist().then(this.sort).then(() =>console.log(JSON.stringify(this.db)));
-        }
+        this.db = db;
+        //    this.prepareDb();
+        //    this.fetchWhishlist().then(this.sort).then(() =>console.log(JSON.stringify(this.db)));
+
     },
     methods: {
         prepareDb() {
@@ -35,7 +32,7 @@ const app = new Vue({
         },
         fillDb(key,link) {
             return readWhishlist(link).then(data => {
-                /*data.shift();
+                data.shift();
                 const raids = new Set(data.map( item => item[3]));
                 raids.forEach(raid => {
                     this.item[raid] = {}
@@ -45,7 +42,7 @@ const app = new Vue({
                         this.item[raid][boss] = dataFromRaid.filter(item => item[2] === boss).map(item => item[0]);
                     });     
                 });
-                console.log(this.item)*/
+                console.log('this.item', this.item)
 
                 data.forEach( item => {
                     const value = item[0];
@@ -68,9 +65,15 @@ const app = new Vue({
                 });
             });
         },
-        fetchWhishlist() {
-            return      this.fillDb('Xandary', 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSYA5z622oIi-v2lhmnKaIUiD-rO2Y1CAfiftfnKT11cKunqWP98AYNkG6zDVLNCrJVJhVgEiSpcO-x/pub?gid=0&single=true&output=csv')
-             .then(() => this.fillDb('Seywar', 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSm9CfMX3o4Xqi4FmH6BU8XtMRzyu9KDrHp7FDpwpuUNTcFZnBej6JYAWuhbSbk1W2Zv4Dd15dQxDvi/pub?gid=0&single=true&output=csv'));
+        async fetchWhishlist() {
+            await this.fillDb('Rashgarroth', 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTrvEdtG7khnUToClJMfV7jirEc8FAB3GjP87dpaslcJnxkC8gWgR6ITPed8k_O8LCbaVMduxZnSGe-/pub?gid=0&single=true&output=csv')
+            await this.fillDb('Xandary', 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQcc1FutaxVyJZUJEZlq3h9sm6ycFh58tqwayBY_L0FWqGDlDRPUO1MfeY0HPw9bwJq0T9hghQt5dzK/pub?gid=0&single=true&output=csv');
+            await this.fillDb('Grinta', 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRSOybM2wSaHs2hLiOlYcS358d6j7bgb0sNN8M4Ld76FYNUpmW3_A6dDSGnYuQlISJp2zyxpbQDPMB6/pub?gid=0&single=true&output=csv');
+            await this.fillDb('Ahwii', 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQZKo84SREeDwPFyLghJhbRDyjrgPSoer-4ClwpP32zI_GdELVkjNPnWHixo3xseIytU3EDxYpoTUA-/pub?gid=0&single=true&output=csv');
+            await this.fillDb('Zelion', 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRE45pTn40bF-WZdxE9_wMF48kkTiN-3bvH7ffkjBg1QbYK0MW6Mwt9WdzwaI2t4eMpQucSOSrmz1kY/pub?gid=0&single=true&output=csv');
+            await this.fillDb('Taurnil', 'https://docs.google.com/spreadsheets/d/e/2PACX-1vStGEJ9Be5HDTlrxLI5PFmNUnTeFfrPx-PXn7TY7VEsbUSCWkF4poysA29Lpyl6cmAAa4DVRcwF6kht/pub?gid=0&single=true&output=csv');
+            await this.fillDb('Dojila', 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTlBZMcxJLYuxPhgl_eUlwXCo0OAYuzBt7QMlYm2huAeiMQG2ECqSZbWGuNClDoPQlM3aldbQvIU-aL/pub?gid=0&single=true&output=csv');
+            await this.fillDb('Fellerson', 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRub7bdZaJjs-sfCsFfSv1bgLheKuLu0-W_7VrEKT9ZKcigZickSyuXyVylfX1Z3aR4hs7zW4qt1EUx/pub?gid=0&single=true&output=csv');
         },
         
         sort() {
