@@ -14,9 +14,8 @@ const app = new Vue({
     },
     created: function () {
         this.db = db;
-        //    this.prepareDb();
-        //    this.fetchWhishlist().then(this.sort).then(() =>console.log(JSON.stringify(this.db)));
-
+        // this.prepareDb();
+        // this.fetchWhishlist().then(this.sort).then(() =>console.log(JSON.stringify(this.db)));
     },
     methods: {
         prepareDb() {
@@ -74,7 +73,14 @@ const app = new Vue({
             await this.fillDb('Taurnil', 'https://docs.google.com/spreadsheets/d/e/2PACX-1vStGEJ9Be5HDTlrxLI5PFmNUnTeFfrPx-PXn7TY7VEsbUSCWkF4poysA29Lpyl6cmAAa4DVRcwF6kht/pub?gid=0&single=true&output=csv');
             await this.fillDb('Dojila', 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTlBZMcxJLYuxPhgl_eUlwXCo0OAYuzBt7QMlYm2huAeiMQG2ECqSZbWGuNClDoPQlM3aldbQvIU-aL/pub?gid=0&single=true&output=csv');
             await this.fillDb('Fellerson', 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRub7bdZaJjs-sfCsFfSv1bgLheKuLu0-W_7VrEKT9ZKcigZickSyuXyVylfX1Z3aR4hs7zW4qt1EUx/pub?gid=0&single=true&output=csv');
+            await this.fillDb('Mareeka', 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ77i0sIPhnFh5rzFPW2yY9EUSB1ybGKm2OE8-b0emFX88C8glL_3bbZFzJQ1hmnH58xQs8me2RZVbz/pub?gid=0&single=true&output=csv');
+            await this.fillDb('Kinua', 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQhr6RihR2PtQSAucCrENVHhZUqggDrUs3dNtHlm3fM_9VQDPwytP0uFfSsuWvL9qWWw0IUzPA-mPt3/pub?gid=0&single=true&output=csv');
+            await this.fillDb('Jahaag', 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTy_P8RzOi-0_t-1DpusccQt26tXGIuPUSTmK2QiQLTwD4J5xVmxGYv-yXJYbTg9pXJOB6mUokYii5p/pub?gid=0&single=true&output=csv');
+            await this.fillDb('Geb', 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRIn7K536DNKZppadip49PmODs7Yo-1bY8mGVz9-KIm2EyDZC5UzHPwazx9enE7Vp-dyXFRFOjpGSz5/pub?gid=0&single=true&output=csv');
+            await this.fillDb('barbieturic', 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTRXpdcwlgLNTxSvtTXJ9XWnvC0JQcUwaskK9CpueZTxeSKwGI-KkYzDHv5gwAi7WDCJqBk1mfw_p_a/pub?gid=0&single=true&output=csv');
+            await this.fillDb('Yumpala', 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTa8IJARC-48yH1gcK9lLL0CIF2J8ws_yftnB-yKaY86uSyCCfNABvgQEGzcgtKxvwbhpFh1GrWIN0u/pub?gid=0&single=true&output=csv');
         },
+        
         
         sort() {
             this.db.forEach( raid => {
