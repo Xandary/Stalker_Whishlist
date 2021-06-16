@@ -68,7 +68,7 @@ const app = new Vue({
             await this.fillDb('Rashgarroth', 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTrvEdtG7khnUToClJMfV7jirEc8FAB3GjP87dpaslcJnxkC8gWgR6ITPed8k_O8LCbaVMduxZnSGe-/pub?gid=0&single=true&output=csv')
             await this.fillDb('Xandary', 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQcc1FutaxVyJZUJEZlq3h9sm6ycFh58tqwayBY_L0FWqGDlDRPUO1MfeY0HPw9bwJq0T9hghQt5dzK/pub?gid=0&single=true&output=csv');
             await this.fillDb('Grinta', 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRSOybM2wSaHs2hLiOlYcS358d6j7bgb0sNN8M4Ld76FYNUpmW3_A6dDSGnYuQlISJp2zyxpbQDPMB6/pub?gid=0&single=true&output=csv');
-            await this.fillDb('Ahwii', 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQZKo84SREeDwPFyLghJhbRDyjrgPSoer-4ClwpP32zI_GdELVkjNPnWHixo3xseIytU3EDxYpoTUA-/pub?gid=0&single=true&output=csv');
+            await this.fillDb('Ahwii', 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRXoqAVWNuOGJegLxTbOlpWldmJBGN7WejED5BzoM-7s6gNvt6LdD-7yjvUPtRdoGn-c1prbZ59MG6K/pub?gid=0&single=true&output=csv');
             await this.fillDb('Zelion', 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRE45pTn40bF-WZdxE9_wMF48kkTiN-3bvH7ffkjBg1QbYK0MW6Mwt9WdzwaI2t4eMpQucSOSrmz1kY/pub?gid=0&single=true&output=csv');
             await this.fillDb('Taurnil', 'https://docs.google.com/spreadsheets/d/e/2PACX-1vStGEJ9Be5HDTlrxLI5PFmNUnTeFfrPx-PXn7TY7VEsbUSCWkF4poysA29Lpyl6cmAAa4DVRcwF6kht/pub?gid=0&single=true&output=csv');
             await this.fillDb('Dojila', 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTlBZMcxJLYuxPhgl_eUlwXCo0OAYuzBt7QMlYm2huAeiMQG2ECqSZbWGuNClDoPQlM3aldbQvIU-aL/pub?gid=0&single=true&output=csv');
@@ -79,7 +79,11 @@ const app = new Vue({
             await this.fillDb('Geb', 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRIn7K536DNKZppadip49PmODs7Yo-1bY8mGVz9-KIm2EyDZC5UzHPwazx9enE7Vp-dyXFRFOjpGSz5/pub?gid=0&single=true&output=csv');
             await this.fillDb('barbieturic', 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTRXpdcwlgLNTxSvtTXJ9XWnvC0JQcUwaskK9CpueZTxeSKwGI-KkYzDHv5gwAi7WDCJqBk1mfw_p_a/pub?gid=0&single=true&output=csv');
             await this.fillDb('Yumpala', 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTa8IJARC-48yH1gcK9lLL0CIF2J8ws_yftnB-yKaY86uSyCCfNABvgQEGzcgtKxvwbhpFh1GrWIN0u/pub?gid=0&single=true&output=csv');
+            await this.fillDb('Sailar', 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRfAA4WH9s8k8BMml4q9-OFcU-yBGHeUUPdnPdrE2wsvQyMdV1lfyAMMHuCQ_TzvibHnDarwRbRxHD4/pub?gid=0&single=true&output=csv');
+            await this.fillDb('Taurache', 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTQ4bs3R4qOOzawBkpm3UNGXlIkwMbuYmrYhBDk-tGGscP6GAiOyEVR8_NBUuRDNLDZZZ3x00KTyVdh/pub?gid=0&single=true&output=csv');
+            await this.fillDb('Tochtoch', 'https://docs.google.com/spreadsheets/d/e/2PACX-1vR4EYvimudtT6L4P9U0pQsru-j3xYwHC5dRjNctnSvhj1YGNB7V2A75U0lMWlsV8j2ssiIYSGK0Udpg/pub?gid=0&single=true&output=csv');
         },
+        
         
         
         sort() {
