@@ -13,9 +13,9 @@ const app = new Vue({
         activeBoss: 'Karazhan'
     },
     created: function () {
-        this.db = db;
-        // this.prepareDb();
-        // this.fetchWhishlist().then(this.sort).then(() =>console.log(JSON.stringify(this.db)));
+        //this.db = db;
+        this.prepareDb();
+        this.fetchWhishlist().then(this.sort).then(() =>console.log(JSON.stringify(this.db)));
     },
     methods: {
         prepareDb() {
@@ -82,6 +82,7 @@ const app = new Vue({
             await this.fillDb('Sailar', 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRfAA4WH9s8k8BMml4q9-OFcU-yBGHeUUPdnPdrE2wsvQyMdV1lfyAMMHuCQ_TzvibHnDarwRbRxHD4/pub?gid=0&single=true&output=csv');
             await this.fillDb('Taurache', 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTQ4bs3R4qOOzawBkpm3UNGXlIkwMbuYmrYhBDk-tGGscP6GAiOyEVR8_NBUuRDNLDZZZ3x00KTyVdh/pub?gid=0&single=true&output=csv');
             await this.fillDb('Tochtoch', 'https://docs.google.com/spreadsheets/d/e/2PACX-1vR4EYvimudtT6L4P9U0pQsru-j3xYwHC5dRjNctnSvhj1YGNB7V2A75U0lMWlsV8j2ssiIYSGK0Udpg/pub?gid=0&single=true&output=csv');
+            await this.fillDb('Reps', 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ9oahxsUAzQmJ6K-hZRhPY7O895OzT6a0eKEa5wYXfryYJ7j_CyamdCEI8c0JhyodNCCLR5UzBlj_E/pub?gid=0&single=true&output=csv');
         },
         
         
