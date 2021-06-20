@@ -13,9 +13,9 @@ const app = new Vue({
         activeBoss: 'Karazhan'
     },
     created: function () {
-        // this.db = db;
-        this.prepareDb();
-        this.fetchWhishlist().then(this.sort).then(() =>console.log(JSON.stringify(this.db)));
+        this.db = db;
+        // this.prepareDb();
+        // this.fetchWhishlist().then(this.sort).then(() =>console.log(JSON.stringify(this.db)));
     },
     methods: {
         prepareDb() {
