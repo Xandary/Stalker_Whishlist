@@ -91,7 +91,7 @@ const app = new Vue({
             await this.fillDb('Souc', 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSHrS_OwlhefVkbV3QEoz8ouB6WEV67j0VclT80EjxYLYoIuR7ZprxVAuI8_ZAuK9Qc6-gqb0I5Utlu/pub?gid=0&single=true&output=csv');
             await this.fillDb('Ahwii', 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRXoqAVWNuOGJegLxTbOlpWldmJBGN7WejED5BzoM-7s6gNvt6LdD-7yjvUPtRdoGn-c1prbZ59MG6K/pub?gid=0&single=true&output=csv');
             await this.fillDb('Fellerson', 'https://docs.google.com/spreadsheets/d/e/2PACX-1vT7dS0-dsvdszZubdh7tt_aM7hsWjIN9Czx6kOoxwzTkMT-N2bR_6W-PEUpSlVkLNFOd6uO-d650jHG/pub?gid=0&single=true&output=csv');
-            await this.fillDb('Grinta', 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRSOybM2wSaHs2hLiOlYcS358d6j7bgb0sNN8M4Ld76FYNUpmW3_A6dDSGnYuQlISJp2zyxpbQDPMB6/pub?gid=0&single=true&output=csv');
+            await this.fillDb('Grinta', 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQVR6Msa8oUPKWzm8bkvLZJBVS62ibQuTKS9QN7mYjsrzVO1LlBmx3QabTvjBjXtj2a1H2UiAeGC2ll/pub?gid=0&single=true&output=csv');
         },
         
         
