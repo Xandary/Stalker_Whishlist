@@ -71,6 +71,7 @@ const app = new Vue({
             await this.fillDb('Barbieturic', 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTRXpdcwlgLNTxSvtTXJ9XWnvC0JQcUwaskK9CpueZTxeSKwGI-KkYzDHv5gwAi7WDCJqBk1mfw_p_a/pub?gid=0&single=true&output=csv');
             await this.fillDb('Chuwba', 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRq89GawFMad1jjS3IpMFvle6pNwHXzZPOyfXId0P4lfU3fB6VixU6_cq_fE5ToYMfob9kD5uy1bqZc/pub?gid=0&single=true&output=csv');
             await this.fillDb('Dojila', 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTlBZMcxJLYuxPhgl_eUlwXCo0OAYuzBt7QMlYm2huAeiMQG2ECqSZbWGuNClDoPQlM3aldbQvIU-aL/pub?gid=0&single=true&output=csv');
+            await this.fillDb('Dracho', 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSxlY6xbFyocc6tF2yT9pBDsy3QD0HQ28ZxVRuGna79ZjlBiH2NY37BfWejqH3gAvEQmbejlsUP7EKK/pub?gid=0&single=true&output=csv');
             await this.fillDb('Extrim', 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQDyULUB61383R1NEcdNloi33JWu8HM4D_Aw4hiKDk8Mh4-vbzOPQKHDdm-22eI1AzaBl6WSFkIrUdl/pub?gid=0&single=true&output=csv');
             await this.fillDb('Geb', 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRIn7K536DNKZppadip49PmODs7Yo-1bY8mGVz9-KIm2EyDZC5UzHPwazx9enE7Vp-dyXFRFOjpGSz5/pub?gid=0&single=true&output=csv');
             await this.fillDb('Hissen', 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRm52wVC4q7vQ1LeNUNgDPkcV0Dv7kd_YjuacrpRNBtjpBN6RyF-Q1fYSxpLxj68HW-7qG1EW4WVdB7/pub?gid=0&single=true&output=csv');
@@ -90,7 +91,6 @@ const app = new Vue({
             await this.fillDb('Ahwii', 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRXoqAVWNuOGJegLxTbOlpWldmJBGN7WejED5BzoM-7s6gNvt6LdD-7yjvUPtRdoGn-c1prbZ59MG6K/pub?gid=0&single=true&output=csv');
             await this.fillDb('Fellerson', 'https://docs.google.com/spreadsheets/d/e/2PACX-1vT7dS0-dsvdszZubdh7tt_aM7hsWjIN9Czx6kOoxwzTkMT-N2bR_6W-PEUpSlVkLNFOd6uO-d650jHG/pub?gid=0&single=true&output=csv');
             await this.fillDb('Grinta', 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRSOybM2wSaHs2hLiOlYcS358d6j7bgb0sNN8M4Ld76FYNUpmW3_A6dDSGnYuQlISJp2zyxpbQDPMB6/pub?gid=0&single=true&output=csv');
-
         },
         
         
